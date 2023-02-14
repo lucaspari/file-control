@@ -7,9 +7,8 @@ use Illuminate\Support\Facades\Log;
 class fileController extends Controller
 {
     public function analyze(Request $request){
-        $file = $request;
-        $out = new \Symfony\Component\Console\Output\ConsoleOutput();
-        $out->writeln($file);
-  
+        $data = $request->json()->all();
+        // Print the PHP array
+        error_log($request);
     }
 }
