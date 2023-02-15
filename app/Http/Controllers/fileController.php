@@ -7,8 +7,8 @@ use Illuminate\Support\Facades\Log;
 class fileController extends Controller
 {
     public function analyze(Request $request){
-        $data = $request->json()->all();
-        // Print the PHP array
-        error_log($request);
+        $sellers = $request->input('sellers');
+        $customers = $request->input('customers');
+        
     }
 }
